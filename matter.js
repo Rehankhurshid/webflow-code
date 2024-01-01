@@ -1,4 +1,5 @@
-let Engine = Matter.Engine,
+$(document).ready(function() {
+  let Engine = Matter.Engine,
   Render = Matter.Render,
   World = Matter.World,
   Bodies = Matter.Bodies,
@@ -157,3 +158,4 @@ Matter.Events.on(engine, "afterUpdate", function () {
 window.addEventListener("scroll", () => {
   gsap.ticker.tick(); // Manually updates GSAP's internal time, which can also trigger ScrollTrigger updates
 });
+})
