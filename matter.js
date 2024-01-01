@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("Page is Ready");
   let Engine = Matter.Engine,
   Render = Matter.Render,
   World = Matter.World,
