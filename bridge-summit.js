@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+
 console.log("Editing via VS")
 function scramble() {
   const scrambleDate = document.querySelectorAll(".bge24-header_date");
