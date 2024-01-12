@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-
-console.log("Editing via VS")
+console.log("NTP")
 function scramble() {
   const scrambleDate = document.querySelectorAll(".bge24-header_date");
   const scrambleMonth = document.querySelectorAll(".bge24-header_month");
