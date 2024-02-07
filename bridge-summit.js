@@ -272,10 +272,26 @@ function speakerLines() {
 }
 
 function textAnimations() {
-  // Split text into spans
-  let typeSplit = new SplitType("[text-split]", {
-    types: "words, chars, lines",
-    tagName: "span",
+  // text splitting code
+  let typeSplit;
+
+  function runSplitType() {
+    typeSplit = new SplitType("[text-split]", {
+      types: "lines, words, chars",
+      tagName: "span"
+    });
+  }
+
+  runSplitType();
+
+  //Run the code when window width changes
+  let windowWidth = window.innerWidth;
+  window.addEventListener("resize", function () {
+    if (windowWidth !== window.innerWidth) {
+      windowWidth = window.innerWidth;
+      typeSplit.revert();
+      runSplitType();
+    }
   });
 
   let scrambleSplit = new SplitType("[scramble-slide-up]", {
